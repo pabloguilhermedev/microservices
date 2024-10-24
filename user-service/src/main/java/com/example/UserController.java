@@ -11,7 +11,7 @@ public class UserController {
 
     private final List<User> users = new ArrayList<>();
 
-    @GetMapping("/")
+    @GetMapping()
     public List<User> getUsers() {
         return users;
     }
@@ -25,7 +25,7 @@ public class UserController {
                 .orElse(null);
     }
 
-    @PostMapping("/")
+    @PostMapping()
     public User createUser(@RequestBody User user) {
         users.add(user);
         return user;

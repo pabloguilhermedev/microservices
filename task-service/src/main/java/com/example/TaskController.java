@@ -12,7 +12,7 @@ public class TaskController {
 
     private final List<Task> tasks = new ArrayList<>();
 
-    @GetMapping("/")
+    @GetMapping()
     public List<Task> getTasks() {
         return tasks;
     }
@@ -25,7 +25,7 @@ public class TaskController {
                 .orElse(null);
     }
 
-    @PostMapping("/")
+    @PostMapping()
     public Task createTask(@RequestBody Task task) {
         tasks.add(task);
         return task;
