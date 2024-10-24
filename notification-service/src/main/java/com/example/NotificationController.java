@@ -11,7 +11,7 @@ public class NotificationController {
 
     private final List<Notification> notifications = new ArrayList<>();
 
-    @GetMapping("/")
+    @GetMapping()
     public List<Notification> getNotifications() {
         return notifications;
     }
@@ -24,7 +24,7 @@ public class NotificationController {
                 .orElse(null);
     }
 
-    @PostMapping("/")
+    @PostMapping()
     public Notification createNotification(@RequestBody Notification notification) {
         notifications.add(notification);
         return notification;
